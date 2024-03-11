@@ -27,4 +27,11 @@ def solution6(absolutes,signs):
          answer -= absolutes[i]   
    return answer
 
-print(solution6([4,7,12],[true,false,true]))
+def solution7(phone_number):
+  answer = ''
+  for i in range(len(phone_number)):
+    print(i, phone_number[i])
+    answer += '*' if i < len(phone_number)-4 else phone_number[i] 
+  return answer    
+
+print(solution7("027778888"))
