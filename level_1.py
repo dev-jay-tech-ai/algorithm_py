@@ -38,5 +38,11 @@ def solution8(numbers):
    print(sum(numbers))
    return sum(range(10)) - sum(numbers)
 
+def solution9(arr):
+  if len(arr) > 1:
+    arr.remove(min(arr))
+    return arr
+  else:
+    return -1
 
-print(solution8([5,8,4,0,6,7,9]))
+print(solution9([4,3,2,1]))
