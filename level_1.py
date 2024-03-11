@@ -11,8 +11,11 @@ def solution3(num):
      num = num/2 if num % 2 == 0 else num * 3 + 1
   return -1   
 
-
 def solution4(seoul):
-   return "김서방은 {}에 있다".format(seoul.index('Kim'))
+   return "김서방은 " + str(seoul.index('Kim')) + "에 있다"
 
-print(solution4(['jane','Kim']))
+def solution5(arr,divisor):
+   result = list(filter(lambda n:n%divisor == 0,arr))
+   return sorted(result) if len(result) > 0 else [-1]
+
+print(solution5([3,2,6],10))
