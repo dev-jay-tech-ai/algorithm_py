@@ -34,4 +34,9 @@ def solution7(phone_number):
     answer += '*' if i < len(phone_number)-4 else phone_number[i] 
   return answer    
 
-print(solution7("027778888"))
+def solution8(numbers):
+   print(sum(numbers))
+   return sum(range(10)) - sum(numbers)
+
+
+print(solution8([5,8,4,0,6,7,9]))
