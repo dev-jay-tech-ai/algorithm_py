@@ -11,4 +11,8 @@ def solution3(num):
      num = num/2 if num % 2 == 0 else num * 3 + 1
   return -1   
 
-print(solution3(1))
+
+def solution4(seoul):
+   return "김서방은 {}에 있다".format(seoul.index('Kim'))
+
+print(solution4(['jane','Kim']))
