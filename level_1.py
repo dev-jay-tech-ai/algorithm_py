@@ -18,4 +18,13 @@ def solution5(arr,divisor):
    result = list(filter(lambda n:n%divisor == 0,arr))
    return sorted(result) if len(result) > 0 else [-1]
 
-print(solution5([3,2,6],10))
+def solution6(absolutes,signs):
+   answer = 0
+   for i in range(len(absolutes)):
+      if signs[i]: 
+         answer += absolutes[i]
+      else:
+         answer -= absolutes[i]   
+   return answer
+
+print(solution6([4,7,12],[true,false,true]))
