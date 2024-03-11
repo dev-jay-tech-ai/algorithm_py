@@ -4,4 +4,11 @@ def solution1(x):
 def solution2(a, b): 
     return sum(range(min(a,b),max(a,b)+1))
 
-print(solution2(3,5))
+def solution3(num):
+  for i in range(500):
+     if num == 1:
+        return i
+     num = num/2 if num % 2 == 0 else num * 3 + 1
+  return -1   
+
+print(solution3(1))
