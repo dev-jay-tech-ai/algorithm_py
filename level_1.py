@@ -44,5 +44,12 @@ def solution9(arr):
     return arr
   else:
     return -1
+  
+def solution10(s):
+   lenth = len(s)/2
+   # 2.5 => 3
+   # 2 => 2, 3
+   return s[int(lenth)] if lenth%1 == 0.5 else s[int(lenth)-1:int(lenth)+1]  
 
-print(solution9([4,3,2,1]))
+print(solution10("abcde"))
+print(solution10("qwer"))
