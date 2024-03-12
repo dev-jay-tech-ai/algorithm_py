@@ -53,3 +53,9 @@ def solution10(s):
 
 print(solution10("abcde"))
 print(solution10("qwer"))
+
+# 반복문 축약형
+a_list = [1,3,2,5,1,2]
+b_list = [a*2 for a in a_list]
+print(b_list)
+
