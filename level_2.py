@@ -52,16 +52,13 @@ def solution8(n,m):
    return(m *(n * '*' + '\n'))
 
 def solution9(n,m):
-   a = min(n,m)
-   b = max(n,m)
-   print(a,b)
-   q = b//a
-   # r = m%n
-   # while r > 0:
-   #    print(a, b)
-   #    b = m%n
-   #    a = m//n
-   # return [a,b, '']   
+   a, b = max(n,m), min(n,m)
+   def gcd(a,b):
+      return b if a%b == 0 else gcd(b,a%b)
+   def lcm(a,b):
+      return int(a*b/gcd(a,b))
+
+   return [gcd(a,b), lcm(a,b)]   
    # return [(n if m%n == 0 else 1),(m if m%n == 0 else n*m)]
 
 def solution10(n):
